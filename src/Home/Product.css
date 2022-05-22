@@ -1,0 +1,52 @@
+.card-container{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 25px 0;
+
+}
+.card img{ 
+    margin-left: 30%;
+    width: 150px;
+}
+.card{
+    box-shadow: 0 5px 10px rgba(35, 0, 163, 0.432);
+    padding: 10px;
+    text-align: center;
+}
+.card h6{
+    font-size: 17px;
+    font-weight: 500;
+    color: #252569;
+}
+.card span{
+    font-size: 17px;
+    font-weight: 500;
+}
+.card h4{
+    font-weight: bold;
+    color: #252569;
+}
+.card button{
+    background-color: #252569;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    margin-top: 20px;
+    font-weight: 500;
+}
+.card button:hover{
+    font-weight: 500;
+    background-color: #fff;
+    color: #252569;
+    border: 1px solid #252569;
+}
+.card-title-text{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    color: #252569;
+}
