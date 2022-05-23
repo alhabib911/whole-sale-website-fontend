@@ -1,0 +1,13 @@
+.social-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    background-color: #EBF0F4;
+    padding: 10px;
+    border-radius: 5px;
+    color: #252569;
+}
+.social-login span{
+    padding-left: 6px;
+}

@@ -1,0 +1,48 @@
+
+.login-page{
+    background-color: #EBF0F4;
+    padding: 35px 0;
+}
+.login-area{
+    width: 100%;
+    margin: auto;
+}
+.login-area input{
+    margin: 10px 0;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+}
+.login-container{
+    width: 35%;
+    margin: auto;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+}
+.login-area input:focus{
+    outline: none;
+}
+.submit-button{
+    background-color: #252569;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.forget-button{
+    display: flex;
+    justify-content: center;
+    color: #252569;
+}
+.register-link h5{
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 25px;
+}
+.register-link a{
+    color: #252569;
+    font-weight: 500;
+}

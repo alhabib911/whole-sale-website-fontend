@@ -1,0 +1,202 @@
+._id-product-image{
+    width: 25%;
+    height: 250px;
+}
+._id-product-image img{
+    width: 200px;
+}
+._id-product-details{
+    width: 50%;
+    margin: 0 20px;
+    padding: 0 20px;
+}
+._id-product{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    padding-top: 15px;
+    margin-top: 45px;
+    margin-bottom: 30px;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+}
+._id-product-delivery-notice{
+    width: 25%;
+}
+.home-delivery{
+    display: flex;
+}
+.delivery-icon{
+    margin-top: 6px;
+}
+.home-delivery p{
+    padding-left: 10px;
+}
+.cash-on-delivery{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.cash-on-delivery p{
+    padding-left: 10px;
+}
+.delivery-time{
+    padding-left: 26px;
+    color: #8a8a8a;
+}
+.delivery-title {
+    color: #252569;
+    font-weight: 500;
+}
+.submit-button{
+    display: flex;
+    justify-content: center;
+}
+.submit-button button{
+    width: 40%;
+    background-color: #252569;
+    color: #fff;
+    padding: 10px ;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.quantity-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.quantity-container button{
+    background-color: #252569;
+    padding: 10px 65px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 500;
+}
+.quantity-container input{
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #9e9e9e;
+}
+
+.divider{
+    width: 70%;
+    margin: auto;
+    padding-bottom: 30px;
+}
+
+/* Order Container */
+
+.order-container{
+    background-color: #EBF0F4;
+    padding-bottom: 30px;
+}
+.order-form-title{
+    padding-top: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #252569;
+}
+.order-form{
+    width: 50%;
+    margin: auto;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.order-form-area{
+    background-color: #fff;
+}
+.order-form-area textarea{
+    width: 75%;
+    margin: auto;
+    display: flex;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+.order-form-area textarea:focus{
+    outline: none;
+}
+.product-area{
+    display: flex;
+}
+.product-area p{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.email-area{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    border: 1px solid #f4f4f5;
+    border-radius: 5px;
+    padding: 10px;
+}
+.user-email{
+    padding-top: 17px;
+    padding-left: 18px;
+    width: 100%;
+}
+.user-email input{
+    width: 100%;
+}
+.user-email input:focus{
+    outline: none;
+}
+.user-phone{
+    padding-top: 17px;
+    padding-left: 12px;
+    width: 100%;
+}
+.user-phone input{
+    width: 100%;
+}
+.user-phone input:focus{
+    outline: none;
+}
+.user-address{
+    padding-top: 17px;
+    width: 100%;
+}
+.user-address input{
+    width: 100%;
+}
+.user-address input:focus{
+    outline: none;
+}
+.qty-icon{
+    display: flex;
+    align-items: center;
+}
+.product-quantity{
+    padding-top: 24px;
+    width: 100%;
+}
+.product-quantity input{
+    width: 100%;
+}
+.product-quantity input:focus{
+    outline: none;
+}
+.form-container h2{
+    font-weight: 500;
+    color: #252569;
+}
+.form-container p{
+    font-weight: 500;
+    color: #252569;
+    padding-left: 50px;
+}
+.submit-btn{
+    display: flex;
+    justify-content: center;
+}
+.submit-btn input{
+    background-color: #252569;
+    padding: 10px 55px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}

@@ -4,6 +4,7 @@ import Product from './Product';
 
 const Products = () => {
     const [product] = useProducts();
+
     // console.log(product);
     return (
         <div>

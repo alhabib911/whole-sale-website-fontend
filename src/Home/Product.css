@@ -12,7 +12,7 @@
     width: 150px;
 }
 .card{
-    box-shadow: 0 5px 10px rgba(35, 0, 163, 0.432);
+    box-shadow: 0 5px 10px #e6e6e66e;
     padding: 10px;
     text-align: center;
 }
