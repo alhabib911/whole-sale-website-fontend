@@ -8,3 +8,15 @@
 .account-icon{
     font-size: 18px;
 }
+.navbar-end a{
+    display: flex;
+    align-items: center;
+}
+.navbar-end span{
+    padding-left: 10px;
+}
+.navbar-end a:hover{
+    text-decoration: underline;
+    color: #252569;
+    font-weight: 500;
+}

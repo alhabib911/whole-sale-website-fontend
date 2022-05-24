@@ -7,11 +7,11 @@ const Products = () => {
 
     // console.log(product);
     return (
-        <div>
+        <div className='product-card'>
             <h2 className='card-title-text'>Our Products</h2>
             <div className='card-container'>
             {
-                product.map(product=> <Product
+                product.slice(0, 6).map(product=> <Product
                     product={product}
                 ></Product>)
             }

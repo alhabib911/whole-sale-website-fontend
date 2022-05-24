@@ -106,6 +106,7 @@
 }
 .order-form-area{
     background-color: #fff;
+    padding-bottom: 40px;
 }
 .order-form-area textarea{
     width: 75%;
@@ -171,9 +172,26 @@
 .product-quantity{
     padding-top: 24px;
     width: 100%;
+    display: flex;
+    padding-left: 90px;
 }
 .product-quantity input{
-    width: 100%;
+    width: 40%;
+    padding-left: 72px;
+}
+.increment-button{
+    background-color: #252569;
+    color: #fff;
+    padding: 0 20px;
+    font-weight: 600;
+    font-size: 18px;
+}
+.decrement-button{
+    background-color: #252569;
+    color: #fff;
+    padding: 0 20px;
+    font-weight: 600;
+    font-size: 18px;
 }
 .product-quantity input:focus{
     outline: none;
@@ -188,15 +206,22 @@
     padding-left: 50px;
 }
 .submit-btn{
+    width: 30%;
+    margin: auto;
     display: flex;
     justify-content: center;
-}
-.submit-btn input{
+    align-items: center;
     background-color: #252569;
     padding: 10px 55px;
+}
+.submit-btn input{
     border-radius: 5px;
-    margin-bottom: 20px;
-    color: #fff;
+    color: rgb(32, 7, 7);
     font-weight: 500;
     cursor: pointer;
+    color: #fff;
+}
+.buy-now-icon{
+    color: #fff;
+    padding-right: 5px;
 }
