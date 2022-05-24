@@ -5,6 +5,7 @@ import { FcGoogle } from 'react-icons/fc';
 import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../firebase.init';
+import useToken from '../hooks/useToken';
 import './SocialLogin.css'
 
 const SocialLogin = () => {
@@ -12,6 +13,9 @@ const SocialLogin = () => {
     const navigate = useNavigate()
     const [user] = useAuthState(auth)
 
+    const [token] = useToken(user)
+    console.log(user);
+    
     const handleGoogleSignIn =() => {
         signInWithPopup(auth, googleProvider)
         .then(result =>{
@@ -24,8 +28,9 @@ const SocialLogin = () => {
             toast('Thank You for signin');
         })
     }
-    if(user) {
+    if (token) {
         navigate('/home')
+        console.log(user);
     }
     return (
         

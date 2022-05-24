@@ -10,6 +10,7 @@ import { sendPasswordResetEmail } from 'firebase/auth';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from '../Share/Loading';
+import useToken from '../hooks/useToken';
 
 
 const Login = () => {
@@ -23,8 +24,12 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
-    if (user) {
+
+    const [token] =useToken(user)
+
+    if (token) {
         navigate('/home')
+        console.log(user);
     }
 
     const handleEmailBlur = event => {

@@ -4,12 +4,14 @@ import Footer from '../Share/Footer'
 import './Register.css'
 import SocialLogin from '../Authentication/SocialLogin'
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-
-
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../firebase.init';
-import { sendEmailVerification, updateProfile } from 'firebase/auth';
+import { sendEmailVerification } from 'firebase/auth';
 import { toast, ToastContainer } from 'react-toastify';
+import useToken from '../hooks/useToken';
+
+
+
 
 const Register = () => {
     const [displayName, setDisplayName] = useState('')
@@ -19,7 +21,16 @@ const Register = () => {
     const [error, setError] = useState('')
     const navigate = useNavigate()
 
-    const [createUserWithEmailAndPassword, user, loading] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true })
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading
+    ] = useCreateUserWithEmailAndPassword(auth)
+
+    const [token] = useToken(user)
+
+    console.log(user);
+
 
     const handleNameBlur = event => {
         setDisplayName(event.target.value)
@@ -37,13 +48,15 @@ const Register = () => {
         setConfirmPassword(event.target.value)
     }
 
-    if (user) {
+    if (token) {
         navigate('/home')
+        // console.log(token);
     }
 
-    const handleCreateUser = event => {
+    const handleCreateUser = async event => {
         event.preventDefault()
-        sendEmailVerification(auth, email)
+        await createUserWithEmailAndPassword(email, password)
+        await sendEmailVerification(auth, email)
             .then(() => {
                 toast('Email Sent');
             })
@@ -55,11 +68,8 @@ const Register = () => {
             setError('Password must be 8 characthers')
             return;
         }
-        createUserWithEmailAndPassword(email, password)
+
     }
-
-
-
     return (
         <div>
             <Navbar></Navbar>

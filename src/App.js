@@ -10,6 +10,9 @@ import Products from './Home/Products';
 import Dashboard from './Pages/Dashboard';
 import MyOrder from './Pages/MyOrder';
 import MyReview from './Pages/MyReview';
+import Users from './Pages/Users';
+
+
 
 function App() {
   return (
@@ -27,6 +30,7 @@ function App() {
         </RequereAuth>}>
           <Route index element={<MyOrder></MyOrder>}></Route>
           <Route path='myreview' element={<MyReview></MyReview>}></Route>
+          <Route path='allusers' element={<Users></Users>}></Route>
         </Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
