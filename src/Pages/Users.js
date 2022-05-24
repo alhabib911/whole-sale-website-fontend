@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import useUsers from '../hooks/useUsers';
 import UserRow from './UserRow';
 

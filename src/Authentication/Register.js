@@ -14,7 +14,7 @@ import useToken from '../hooks/useToken';
 
 
 const Register = () => {
-    const [displayName, setDisplayName] = useState('')
+    const [ setDisplayName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confrimPassword, setConfirmPassword] = useState('')
