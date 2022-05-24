@@ -13,10 +13,9 @@ const Users = () => {
                 <table class="table w-full">
                     <thead>
                         <tr>
-                            <th></th>
                             <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
+                            <th>User Status</th>
+                            <th>Remove Button</th>
                         </tr>
                     </thead>
                     

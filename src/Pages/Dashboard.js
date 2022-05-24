@@ -3,8 +3,13 @@ import Navbar from '../Share/Navbar'
 import Footer from '../Share/Footer'
 import { Link, Outlet } from 'react-router-dom';
 import './Dashboard.css'
+import useAdmin from '../hooks/useAdmin';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../firebase.init';
 
 const Dashboard = () => {
+    const [user] = useAuthState(auth)
+    const [admin] = useAdmin(user)
     return (
         <div>
             <Navbar></Navbar>
@@ -24,7 +29,9 @@ const Dashboard = () => {
                     <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
                         <li><Link to='/dashboard'>My Order</Link></li>
                         <li><Link to='/dashboard/myreview' >My Review</Link></li>
-                        <li><Link to='/dashboard/allusers' >Users Status</Link></li>
+                        {
+                            admin && <li><Link to='/dashboard/allusers' >Users Status</Link></li>
+                        }
                     </ul>
 
                 </div>
