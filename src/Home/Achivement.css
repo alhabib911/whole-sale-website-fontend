@@ -1,0 +1,58 @@
+.img-field img{
+    width: 150px;
+}
+.achivement-title h2{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+    color: #252569;
+}
+.achivement-details{
+    display: flex;
+    justify-content: space-evenly;
+}
+.text-field h1 {
+    font-size: 42px;
+    font-weight: 600;
+    text-align: center;
+}
+.text-field p{
+    font-size: 20px;
+    color: #0053b9;
+}
+.achivement-footer{
+    width: 70%;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 25px;
+    display: flex;
+    box-shadow: 1px 0px 10px 0 gainsboro;
+    border-radius: 10px;
+}
+.achivement-footer-text{
+    width: 50%;
+}
+.achivement-footer-button{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+}
+.achivement-footer-button a{
+    background-color: #252569;
+    padding: 10px 55px;
+    color: #fff;
+    font-weight: 400;
+}
+.achivement-footer-text h2{
+    font-size: 25px;
+    font-weight: 700;
+    color: #252569;
+}
+.achivement-footer-text p{
+    font-size: 18px;
+    font-weight: 500;
+}
