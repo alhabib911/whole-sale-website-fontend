@@ -1,0 +1,117 @@
+footer{
+    
+    background-color: #1C3C6B;
+}
+.footer-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    padding-bottom: 50px;
+}
+.discover{
+    width: 25%;
+}
+.discover-title{
+    padding-top: 70px;
+    color: #fff;
+    font-weight: 500;
+}
+.discover-container{
+    display: flex;
+    justify-content: space-between;
+}
+.discover ul{
+    padding-top: 10px;
+}
+.discover a{
+    color: #fff;
+    font-size: 14px;
+}
+.payment-methods{
+    width: 25%;
+    margin-left: 55px;
+}
+.payment-methods h2{
+    padding-left: 17px;
+}
+.payment-methods-title{
+    padding-top: 70px;
+    color: #fff;
+    font-weight: 500;
+}
+.first-row{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 16px;
+}
+
+.help{
+    width: 25%;
+}
+.help-title{
+    padding-top: 70px;
+    padding-left: 35px;
+    color: #fff;
+    font-weight: 500;
+}
+.help-container p {
+    padding-left: 35px;
+    color: #fff;
+    font-size: 14px;
+    padding-top: 16px;
+    font-weight: 300;
+}
+.contact{
+    width: 25%;
+}
+.contact-title{
+    padding-top: 70px;
+    padding-left: 35px;
+    color: #fff;
+    font-weight: 500;
+}
+.contact-container{
+    padding-left: 35px;
+    color: #fff;
+    font-size: 14px;
+    padding-top: 16px;
+}
+.contact-container li{
+    list-style-type: none;
+}
+.contact-container a{
+    font-size: 14px;
+    font-weight: 300;
+}
+hr{
+    width: 80%;
+    margin: auto;
+}
+.social-icon{
+    display: flex;
+}
+.social-icon a{
+    padding: 10px 8px 0 0;
+}
+.social-icon img {
+    width: 30px;
+}
+.copywrite-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 50px 0;
+}
+.copywrite-container img{
+    width: 165px;
+    margin: 0 0 0 -4px;
+}
+.copywrite-container p{
+    margin: 20px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 24px 0px 10px 0px;
+}
