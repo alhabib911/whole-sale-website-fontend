@@ -1,70 +1,27 @@
-.add-product-form{
-    width: 70%;
+.product-add-page{
+    background-color: #fff;
+    padding: 35px 0;
+}
+.product-add-container{
+    width: 60%;
     margin: auto;
     border: 1px solid gainsboro;
-    border-radius: 5px;
-    margin-top: 10px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #EBF0F4;
+    
 }
-.form-area{
-    width: 98%;
-    margin: auto;
-    display: flex;
-    border: 1px solid #f4f4f5;
-    border-radius: 5px;
-    padding: 10px;
-    margin-top: 10px;
-}
-.input-field{
-    padding-top: 0;
-    padding-left: 12px;
-    width: 80%;
-}
-.input-field input{
-    width: 100%;
-}
-.input-field input:focus{
-    outline: none;
-}
-.title h2{
-    font-size: 14px;
-}
-.input-field-name{
-    padding-left: 34px;
-}
-.input-field-details{
-    width: 100%;
-}
-.input-field textarea:focus{
-    outline: none;
-} 
-.input-field-min-qty{
-    padding-left: 5px;
-}
-.input-field-qty{
-    padding-left: 10px;
-}
-.input-field-price{
-    padding-left: 43px;
-}
-.product-add-btn{
-    background-color: #252569;
-    padding: 10px 55px;
-    color: #fff;
-    display: flex;
-    align-items: center;
-}
-.add-product-submit-button{
+.add-product-btn{
     display: flex;
     justify-content: center;
-    padding: 15px 0;
 }
-.add-product-submit-button span{
-    padding: 5px;
-}
-.add-product-title h1{
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 20px;
-    color: #252569;
+.add-product-btn input{
+    width: 35%;
+    background-color: #252569;
+    color: #fff;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
 }
