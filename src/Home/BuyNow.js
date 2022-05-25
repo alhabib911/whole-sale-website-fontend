@@ -68,7 +68,7 @@ const BuyNow = () => {
             })
             .then(() => {
                 if (user) {
-                    navigate('/dashboard')
+                    navigate('/dashboard/myorder')
                 }
             })
 
@@ -127,6 +127,7 @@ const BuyNow = () => {
                         <form onSubmit={handelAdOrder} className='form-container'>
                             <div className="product-area">
                                 <input type='hidden' name="price" value={singleProduct?.price} id="" readOnly></input>
+                                <input type="hidden" name="userName" id="" value={user?.displayName} readOnly />
                             </div>
                             <div className="product-area">
                                 <p>Product Name:</p><textarea name="productName" value={singleProduct?.name} id="" readOnly></textarea>
@@ -138,15 +139,6 @@ const BuyNow = () => {
                                 </div>
                                 <div className="user-email">
                                     <input type="email" name="email" id="" value={user?.email} readOnly />
-                                </div>
-                            </div> <br />
-                            <div className="email-area">
-                                <div className="email-title">
-                                    <h2>Name:</h2>
-                                    <AiOutlineMail></AiOutlineMail>
-                                </div>
-                                <div className="user-email">
-                                    <input type="text" name="userName" id="" value={user?.displayName} readOnly />
                                 </div>
                             </div> <br />
                             <div className="email-area">

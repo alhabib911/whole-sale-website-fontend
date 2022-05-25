@@ -4,13 +4,19 @@ import Login from './Authentication/Login';
 import Register from './Authentication/Register';
 import RequireAdmin from './Authentication/RequereAuth/RequereAdmin';
 import RequereAuth from './Authentication/RequereAuth/RequereAuth';
+import RequireCustomer from './Authentication/RequereAuth/RequereCustomer';
 import BuyNow from './Home/BuyNow';
 import Home from './Home/Home';
 import NotFound from './Home/NotFound';
 import Products from './Home/Products';
+import AddProduct from './Pages/AddProduct';
 import Dashboard from './Pages/Dashboard';
+import ManageAllOrders from './Pages/ManageAllOrders';
+import ManageProducts from './Pages/ManageProducts';
 import MyOrder from './Pages/MyOrder';
+import MyProfile from './Pages/MyProfile';
 import MyReview from './Pages/MyReview';
+import Payment from './Pages/Payment';
 import Users from './Pages/Users';
 
 
@@ -29,9 +35,14 @@ function App() {
         <Route path='/dashboard' element={<RequereAuth>
           <Dashboard></Dashboard>
         </RequereAuth>}>
-          <Route index element={<MyOrder></MyOrder>}></Route>
-          <Route path='myreview' element={<MyReview></MyReview>}></Route>
+          <Route index element={<MyProfile></MyProfile>}></Route>
+          <Route path='myorder' element={<MyOrder></MyOrder>}></Route>
+          <Route path='payment/:id' element={<Payment></Payment>}></Route>
+          <Route path='myreview' element={<RequireCustomer><MyReview></MyReview></RequireCustomer>}></Route>
           <Route path='allusers' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
+          <Route path='manageallorders' element={<RequireAdmin><ManageAllOrders></ManageAllOrders></RequireAdmin>}></Route>
+          <Route path='addproduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
+          <Route path='manageproducts' element={<RequireAdmin><ManageProducts></ManageProducts></RequireAdmin>}></Route>
         </Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>

@@ -1,0 +1,19 @@
+.hero{
+    background-color: #EBF0F4;
+    height: 450px;
+}
+.hero-text-container{
+    width: 50%;
+}
+.hero-img-container{
+    width: 50%;
+}
+.hero-img-container img{
+    width: 90%;
+}
+.learn-more-button{
+    background-color: #252569;
+    padding: 10px 55px;
+    color: #fff;
+    font-weight: 400;
+}

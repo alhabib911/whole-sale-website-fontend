@@ -6,9 +6,11 @@ import './Dashboard.css'
 import useAdmin from '../hooks/useAdmin';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../firebase.init';
+import useCustomer from '../hooks/useCustomer';
 
 const Dashboard = () => {
     const [user] = useAuthState(auth)
+    const [customer] = useCustomer(user)
     const [admin] = useAdmin(user)
     return (
         <div>
@@ -27,10 +29,26 @@ const Dashboard = () => {
                 <div class="drawer-side">
                     <label for="my-drawer-2" class="drawer-overlay"></label>
                     <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
-                        <li><Link to='/dashboard'>My Order</Link></li>
-                        <li><Link to='/dashboard/myreview' >My Review</Link></li>
+
+                        <li><Link to='/dashboard'>My Profile</Link></li>
+
+                        {
+                            customer && <li><Link to='/dashboard/myorder'>My Order</Link></li>
+                        }
+                        {
+                            customer && <li><Link to='/dashboard/myreview' >My Review</Link></li>
+                        }
+                        {
+                            admin && <li><Link to='/dashboard/manageallorders' >Manage Orders</Link></li>
+                        }
+                        {
+                            admin && <li><Link to='/dashboard/addproduct' >Add Order</Link></li>
+                        }
                         {
                             admin && <li><Link to='/dashboard/allusers' >Users Status</Link></li>
+                        }
+                        {
+                            admin && <li><Link to='/dashboard/manageproducts' >Manage Products</Link></li>
                         }
                     </ul>
 
