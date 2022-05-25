@@ -4,19 +4,23 @@ import Footer from '../Share/Footer';
 import Navbar from '../Share/Navbar';
 import SocialLogin from '../Authentication/SocialLogin'
 import './Login.css'
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../firebase.init';
 import { sendPasswordResetEmail } from 'firebase/auth';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from '../Share/Loading';
 import useToken from '../hooks/useToken';
+import { FcGoogle } from 'react-icons/fc';
 
 
 const Login = () => {
     const [email, SetEmail] = useState('')
     const [password, setPassword] = useState('')
     const navigate = useNavigate()
+
+    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+
     const [
         signInWithEmailAndPassword,
         user,
@@ -25,8 +29,14 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
 
 
-    const [token] =useToken(user)
+    const [token] =useToken(user || gUser)
 
+
+    if (loading || gLoading) {
+        return 
+    }
+    
+    
     if (token) {
         navigate('/home')
         console.log(user);
@@ -82,7 +92,10 @@ const Login = () => {
                     </div>
                     <div class="flex flex-col w-full border-opacity-50">
                         <div class="divider">OR</div>
-                        <SocialLogin></SocialLogin>
+                        <button
+                        onClick={() => signInWithGoogle()}
+                        className="google-button btn btn-outline"
+                    ><FcGoogle/><span>Continue with Google</span></button>
                     </div>
                 </div>
             </div>

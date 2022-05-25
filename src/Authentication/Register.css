@@ -32,3 +32,6 @@
     color: #252569;
     font-weight: 500;
 }
+.google-button span{
+    padding-left: 5px;
+}

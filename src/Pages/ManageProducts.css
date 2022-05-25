@@ -1,0 +1,11 @@
+.manage-product-table{
+    background-color: rgb(253, 253, 253);
+}
+.Admin-product-manage h2{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+    color: #252569;
+    margin: 20px;
+}
