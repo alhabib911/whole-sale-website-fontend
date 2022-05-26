@@ -23,19 +23,19 @@ const BuyNow = () => {
 
 
     const handelIncrement = () => {
-        if(quantity < singleProduct.quantity){
+        if (quantity < singleProduct.quantity) {
             setQuantity(prevCount => parseInt(prevCount) + 1)
         }
-        else{
+        else {
             toast('Your Purchase limit is over')
         }
     }
 
     const handelDecrement = () => {
-        if(quantity > singleProduct.minmumOrder){
+        if (quantity > singleProduct.minmumOrder) {
             setQuantity(prevCount => prevCount - 1)
         }
-        else{
+        else {
             toast('Please add minimum quantity')
         }
     }
@@ -75,13 +75,16 @@ const BuyNow = () => {
     }
 
 
+    
+
+
     const [user] = useAuthState(auth)
     // console.log(user);
     const { id } = useParams()
     // console.log(id);
     const [product] = useProducts()
     const singleProduct = product.find((product) => product._id == id)
-    
+
     return (
         <div>
             <Navbar></Navbar>
@@ -168,17 +171,17 @@ const BuyNow = () => {
                                 </div>
                                 <div className="product-quantity">
                                     <button onClick={handelDecrement} className='decrement-button'>-</button>
-                                    
-                                    <input type="text"  value={quantity}  onChange={event => setQuantity(event.target.value)} name="quantity" id="" placeholder='100/p' />
+
+                                    <input type="text" value={quantity} onChange={event => setQuantity(event.target.value)} name="quantity" id="" placeholder='100/p' />
                                     <button onClick={handelIncrement} className='increment-button'>+</button>
                                 </div>
                             </div> <br />
                             <div className="submit-btn">
-                            <div className="buy-now-icon">
-                            <GiShoppingCart/>
-                            </div>
+                                <div className="buy-now-icon">
+                                    <GiShoppingCart />
+                                </div>
                                 <div className="buy-now-submit-button">
-                                <input type="submit" value="Buy Now" />
+                                    <input type="submit" value="Buy Now" />
                                 </div>
                             </div>
                         </form>

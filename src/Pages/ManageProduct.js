@@ -10,12 +10,8 @@ const ManageProduct = (props) => {
         if(proceed){
             console.log('delete', id);
             const url = `http://localhost:5000/product/${id}`
-            console.log(url);
             fetch (url, {
-                method: "DELETE",
-                headers: {
-                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
-                }
+                method: "DELETE"
             })
             .then(res => res.json())
             .then(data=> {
@@ -24,6 +20,7 @@ const ManageProduct = (props) => {
                 }
             })
             .then(() => {
+                window.location.reload();
                 toast('This Product is Deleted Reload this page');
             })
         }
@@ -49,7 +46,7 @@ const ManageProduct = (props) => {
                     <small>Available Product: {quantity}/p</small>
                 </div>
                 <div className="product-delete-button">
-                    <button onClick={()=> handleProductItemDelete(_id)}>X </button>
+                <button onClick={()=> handleProductItemDelete(_id)}>Delete</button>
                 </div>
             </div>
             <ToastContainer/>

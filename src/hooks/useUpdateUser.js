@@ -6,7 +6,7 @@ const useUpdateUser = () => {
     const [user] = useAuthState(auth)
     const {email} =user
     // console.log(user);
-    const [updateUser, setUpdateUser] = useState([])
+    const [updateUser, setUpdateUser] = useState({})
     useEffect(()=>{
         fetch(`http://localhost:5000/user/${email}`,{
             method: 'GET',

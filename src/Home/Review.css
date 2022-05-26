@@ -1,0 +1,31 @@
+.all-review {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-top: 70px;
+    padding-bottom: 20px;
+}
+
+.box-container {
+    border: 1px solid gainsboro;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px gainsboro;
+    background-color: #fff;
+}
+.box-container h2{
+    color: #252569;
+    font-weight: 500;
+}
+.review-area{
+    background-color: #EBF0F4;
+}
+.review-title{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+    color: #252569;
+}

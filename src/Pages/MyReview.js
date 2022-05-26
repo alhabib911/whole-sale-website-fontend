@@ -1,19 +1,22 @@
 import React from 'react';
 import { toast } from 'react-toastify';
+import useMyReview from '../hooks/useMyReview';
 import useUpdateUser from '../hooks/useUpdateUser';
 import './MyReview.css'
 
 const MyReview = () => {
     const [updateUser] = useUpdateUser('')
-
-
+    // const [reviews] = useReview('')
+    // console.log(reviews);
+    const [myReview] = useMyReview()
+    console.log(myReview);
     const handelAddReview = event => {
         event.preventDefault()
         const rating = event.target.rating.value
         const review = event.target.review.value
         const email = event.target.email.value
         const name = event.target.name.value
-        
+
 
         const userReviews = { rating, review, name, email }
 
@@ -62,13 +65,36 @@ const MyReview = () => {
                         </div>
                         <textarea className='review' name="review" id="" ></textarea> <br />
                         <input type="hidden" value={updateUser.email} name="email" id="" />
-                        <input type="hidden"  value={updateUser.displayName} name="name" id="" />
+                        <input type="hidden" value={updateUser.displayName} name="name" id="" />
                         <input className='feedback-button' type="submit" value="Feedback" />
                     </form>
                 </div>
             </div>
             <div className="my-review">
 
+
+
+            <div class="overflow-x-auto">
+  <table class="table w-full">
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Review</th>
+        <th>Favorite Color</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+          myReview.map(myReview=> <tr>
+            <td>{myReview.email}</td>
+            <td></td>
+            <td></td>
+          </tr>)
+      }
+
+    </tbody>
+  </table>
+</div>
             </div>
         </div>
     );

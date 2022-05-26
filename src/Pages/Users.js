@@ -5,6 +5,7 @@ import UserRow from './UserRow';
 
 const Users = () => {
     const [user] = useUsers()
+    console.log(user);
 
     return (
         <div>

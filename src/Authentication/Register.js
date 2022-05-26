@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Navbar from '../Share/Navbar'
 import Footer from '../Share/Footer'
 import './Register.css'
-import SocialLogin from '../Authentication/SocialLogin'
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../firebase.init';
@@ -27,9 +26,8 @@ const Register = () => {
         createUserWithEmailAndPassword,
         user,
         loading
-    ] = useCreateUserWithEmailAndPassword(auth)
+    ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true})
 
-    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
     const [token] = useToken(user || gUser)
 
@@ -53,21 +51,18 @@ const Register = () => {
     }
     let signInError;
 
-    if (loading || gLoading || updating) {
+    if (loading || gLoading) {
         return 
     }
     if (error || gError) {
-        signInError = <p className='text-red-500'><small>{error?.message || gError?.message || updateError?.message}</small></p>
+        signInError = <p className='text-red-500'><small>{error?.message || gError?.message}</small></p>
     }
     if (token) {
         navigate('/home')
         // console.log(token);
     }
 
-    const onSubmit = async data => {
-        await updateProfile({ displayName: data.name });
-        console.log('update done');
-    }
+   
 
 
     const handleCreateUser = async event => {
@@ -92,7 +87,7 @@ const Register = () => {
             <Navbar></Navbar>
             <div className="register-page">
                 <div className="register-container">
-                    <form onSubmit={handleCreateUser(onSubmit)} className='register-area'>
+                    <form onSubmit={handleCreateUser} className='register-area'>
                         <label htmlFor="userName">User Name</label> <br />
                         <input onBlur={handleNameBlur} name="displayName" type="text" placeholder='User Name' required /> <br />
                         <label htmlFor="email">Email</label> <br />

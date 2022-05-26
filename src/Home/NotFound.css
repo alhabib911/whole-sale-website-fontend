@@ -1,0 +1,29 @@
+.not-found{
+    background-color: #FFFBEF;
+    padding: 25px;
+}
+.not-found h1{
+    font-size: 100px;
+    text-align: center;
+}
+.not-found h4{
+    text-align: center;
+    color: #ff0033;
+}
+.not-found p{
+    text-align: center;
+}
+.not-found .goback-btn{
+    text-decoration: none;
+    background-color: #EBF0F4;
+    padding: 15px 25px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+}
+.not-found .go-back-button{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+
+}

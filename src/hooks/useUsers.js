@@ -10,7 +10,7 @@ const useUsers = () => {
             }
         })
         .then(res => res.json())
-        .then(res => res.json())
+        .then(data => setUser(data))
     },[])
     return [user, setUser];
 };

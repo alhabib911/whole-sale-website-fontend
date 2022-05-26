@@ -1,10 +1,10 @@
 import React from 'react';
+import AllReviews from '../Pages/AllReviews';
 import Footer from '../Share/Footer';
 import Navbar from '../Share/Navbar';
 import Achivement from './Achivement';
 import Banner from './Banner';
 import Products from './Products';
-import Review from './Review';
 import SecoundBanner from './SecoundBanner';
 import TopBanner from './TopBanner';
 
@@ -18,7 +18,7 @@ const Home = () => {
             <Products></Products>
             <SecoundBanner></SecoundBanner>
             <Achivement></Achivement>
-            <Review></Review>
+            <AllReviews></AllReviews>
             <Footer></Footer>
         </div>
     );

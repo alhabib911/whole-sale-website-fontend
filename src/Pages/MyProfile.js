@@ -15,8 +15,8 @@ import useUpdateUser from '../hooks/useUpdateUser';
 
 
 const MyProfile = () => {
-    const [updateUser] = useUpdateUser('')
-    console.log(updateUser);
+    const [updateUser] = useUpdateUser()
+    // console.log(updateUser);
     const [user] = useAuthState(auth)
     const { email } = user
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
@@ -155,7 +155,7 @@ const MyProfile = () => {
                             </label>
                             <input
                                 type="number"
-                                placeholder="+880example@123"
+                                defaultValue={user?.phoneNumber}
                                 className="input input-bordered "
                                 {...register("phoneNumber", {
                                     required: {
