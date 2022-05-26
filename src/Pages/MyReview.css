@@ -1,0 +1,38 @@
+.feedback{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.review{
+    margin-top: 20px;
+    width: 350px;
+    height: 90px;
+    border: 1px solid gainsboro;
+}
+.review:focus{
+    outline: none;
+}
+.feedback-button{
+    background-color: #252569;
+    padding: 10px 55px;
+    color: #fff;
+    cursor: pointer;
+}
+.create-reating-field{
+    width: 90%;
+    display: flex;
+}
+.user-info{
+    width: 40%;
+}
+.user-review-field{
+    width: 60%;
+    margin-top: 40px;
+}
+.user-details{
+    margin-left: 30px;
+}
+.avata img{
+    width: 300px;
+    margin-bottom: 25px;
+}

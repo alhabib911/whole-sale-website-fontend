@@ -1,0 +1,65 @@
+.my-profile-container{
+    width: 40%;
+    margin: auto;
+    margin-top: 15px;
+}
+.label{
+    display: flex;
+    justify-content: flex-start;
+}
+.profile-area{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    border: 1px solid #f4f4f5;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 2px;
+}
+.profile-input-area{
+    padding-left: 12px;
+    width: 80%;
+}
+.profile-input-area input{
+    width: 100%;
+}
+.profile-input-area input:focus{
+    outline: none;
+}
+.email-title{
+    width: 20%;
+}
+.profile-edit-title{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+    color: #252569;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-edit-title h2{
+    padding-left: 5px;
+}
+.profile-input-area small{
+    color: rgb(170, 170, 170);
+}
+.submit-btn{
+    margin-top: 30px;
+}
+.user-information{
+    width: 40%;
+}
+.user-information h2{
+    text-align: center;
+    font-size: 18px;
+}
+.profile-edit-container{
+    display: flex;
+}
+.avatar{
+    margin-top: 20px;
+    margin-left: 165px;
+    padding-bottom: 25px;
+}

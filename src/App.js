@@ -15,6 +15,7 @@ import ManageAllOrders from './Pages/ManageAllOrders';
 import ManageProducts from './Pages/ManageProducts';
 import MyOrder from './Pages/MyOrder';
 import MyProfile from './Pages/MyProfile';
+import MyProfileEdit from './Pages/MyProfileEdit';
 import MyReview from './Pages/MyReview';
 import Payment from './Pages/Payment';
 import Users from './Pages/Users';
@@ -36,6 +37,7 @@ function App() {
           <Dashboard></Dashboard>
         </RequereAuth>}>
           <Route index element={<MyProfile></MyProfile>}></Route>
+          <Route path='profile/edit' element={<MyProfileEdit></MyProfileEdit>}></Route>
           <Route path='myorder' element={<MyOrder></MyOrder>}></Route>
           <Route path='payment/:id' element={<Payment></Payment>}></Route>
           <Route path='myreview' element={<RequireCustomer><MyReview></MyReview></RequireCustomer>}></Route>

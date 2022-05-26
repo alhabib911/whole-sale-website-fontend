@@ -3,3 +3,6 @@
     color: #252569;
     font-weight: 500;
 }
+.disabled-link {
+    pointer-events: none;
+  }
