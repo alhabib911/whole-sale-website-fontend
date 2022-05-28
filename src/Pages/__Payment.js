@@ -31,7 +31,7 @@ const Payment = () => {
                         <tr>
                             <th>{id}</th>
                             <td>{singleOrder?.displayName || singleOrder?.email}</td>
-                            <td>{singleOrder?.productName}</td>
+                            <td>{singleOrder?.name}</td>
                             <td>{singleOrder?.quantity * singleOrder?.price}</td>
                         </tr>
                     </tbody>

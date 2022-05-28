@@ -6,11 +6,12 @@ import Footer from '../Share/Footer';
 import Navbar from '../Share/Navbar';
 import './UpdateProduct.css'
 
-const UpdateProduct = () => {
+const UpdateProduct = (props) => {
+    const { _id, img, name, price, quantity, minmumOrder } = props.product
     const { id } = useParams()
     const [product, setProduct] = useProducts()
     // console.log(product);
-    const singleProduct = product.find((product) => product._id == id)
+    // const singleProduct = product.find((product) => product._id == id)
 
 
     const handelUpdateProduct = event => {
@@ -49,34 +50,34 @@ const UpdateProduct = () => {
             <div className="product-update-details">
                 <div class="avatar">
                     <div class="w-24 rounded-xl">
-                        <img src={singleProduct?.img} alt="" />
+                        {/* <img src={singleProduct?.img} alt="" /> */}
                     </div>
                 </div>
                 <form onSubmit={handelUpdateProduct}>
                     <div className='single-product-edit'>
                         <div>
                             <label htmlFor="name">Product Name</label> <br />
-                            <input defaultValue={singleProduct?.name} type="text" name="name" id="" />
+                            <input defaultValue={name} type="text" name="name" id="" />
                         </div>
                         <div>
                             <label htmlFor="productId">Product SKU</label> <br />
-                            <input defaultValue={singleProduct?._id} type="text" name="productId" id="" readOnly />
+                            {/* <input defaultValue={singleProduct?._id} type="text" name="productId" id="" readOnly /> */}
                         </div>
                         <div>
                             <label htmlFor="details">Details</label> <br />
-                            <input defaultValue={singleProduct?.details} type="text" name="details" id="" />
+                            {/* <input defaultValue={singleProduct?.details} type="text" name="details" id="" /> */}
                         </div>
                         <div>
                             <label htmlFor="price">Price</label> <br />
-                            <input defaultValue={singleProduct?.price} type="text" name="price" id="" />
+                            {/* <input defaultValue={singleProduct?.price} type="text" name="price" id="" /> */}
                         </div>
                         <div>
                             <label htmlFor="minmumOrder">Minimum Order Qyantity</label> <br />
-                            <input defaultValue={singleProduct?.minmumOrder} type="text" name="minmumOrder" id="" />
+                            {/* <input defaultValue={singleProduct?.minmumOrder} type="text" name="minmumOrder" id="" /> */}
                         </div>
                         <div>
                             <label htmlFor="quantity">Available Quantity</label> <br />
-                            <input defaultValue={singleProduct?.quantity} type="text" name="quantity" id="" />
+                            {/* <input defaultValue={singleProduct?.quantity} type="text" name="quantity" id="" /> */}
                         </div>
                     </div>
                     <div className="update-profile-btn">

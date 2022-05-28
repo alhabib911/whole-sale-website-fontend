@@ -36,7 +36,7 @@ const BuyNow = () => {
 
     const handelAdOrder = event => {
         event.preventDefault()
-        const productName = event.target.productName.value
+        const name = event.target.name.value
         const email = event.target.email.value
         const phone = event.target.phone.value
         const address = event.target.address.value
@@ -45,7 +45,7 @@ const BuyNow = () => {
         const price = event.target.price.value
 
 
-        const order = { productName, email, phone, address, quantity, userName, price }
+        const order = { name, email, phone, address, quantity, userName, price }
 
         fetch('https://secret-sierra-86800.herokuapp.com/manageorder', {
             method: 'POST',
@@ -128,7 +128,7 @@ console.log(product);
                                 <input type="hidden" name="userName" id="" value={user?.displayName} readOnly />
                             </div>
                             <div className="product-area">
-                                <p>Product Name:</p><textarea name="productName" value={singleProduct?.name} id="" readOnly></textarea>
+                                <p>Product Name:</p><textarea name="name" value={singleProduct?.name} id="" readOnly></textarea>
                             </div>
                             <div className="email-area">
                                 <div className="email-title">

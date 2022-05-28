@@ -27,7 +27,7 @@ const MyOrder = () => {
                         {
                             order.map(order => <tr>
                                 <th>{order.userName || order.email.slice(0, 10)}...</th>
-                                <td>{order.productName.slice(0, 30)}</td>
+                                <td>{order.name.slice(0, 30)}</td>
                                 <td>{order.quantity}</td>
                                 <td>{order.price}</td>
                                 <td>{order.quantity * order.price}</td>
