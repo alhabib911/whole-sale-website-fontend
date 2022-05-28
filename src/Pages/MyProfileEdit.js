@@ -49,7 +49,7 @@ const MyProfileEdit = () => {
                         img: img
                     }
                     // send to your database 
-                    const url = `http://localhost:5000/${email}`
+                    const url = `https://secret-sierra-86800.herokuapp.com/${email}`
                     fetch(url, {
                         method: 'PUT',
                         headers: {

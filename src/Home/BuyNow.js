@@ -47,7 +47,7 @@ const BuyNow = () => {
 
         const order = { name, email, phone, address, quantity, userName, price }
 
-        fetch('http://localhost:5000/manageorder', {
+        fetch('https://secret-sierra-86800.herokuapp.com/manageorder', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
