@@ -10,7 +10,7 @@ const useOrder = () => {
     const navigate = useNavigate()
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/manageorder?email=${user.email}`, {
+            fetch(`https://secret-sierra-86800.herokuapp.com/manageorder?email=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`

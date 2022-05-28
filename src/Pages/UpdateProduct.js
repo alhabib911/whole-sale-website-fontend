@@ -15,19 +15,18 @@ const UpdateProduct = () => {
 
     const handelUpdateProduct = event => {
         event.preventDefault()
-        const productName = event.target.productName.value
-        const productId = event.target.productId.value
+        const name = event.target.name.value
         const details = event.target.details.value
         const price = event.target.price.value
         const minmumOrder = event.target.minmumOrder.value
         const quantity = event.target.quantity.value
     
-        const updateProduct = { productName, productId, details, price, minmumOrder, quantity }
+        const updateProduct = { name, details, price, minmumOrder, quantity }
         // console.log(updateProduct);
        
     
     
-        const url = `http://localhost:5000/product/${id}`
+        const url = `https://secret-sierra-86800.herokuapp.com/product/${id}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -43,15 +42,6 @@ const UpdateProduct = () => {
                 event.target.reset()
             })
     }
-    
-
-
-
-
-
-
-
-
 
     return (
         <div>
@@ -65,8 +55,8 @@ const UpdateProduct = () => {
                 <form onSubmit={handelUpdateProduct}>
                     <div className='single-product-edit'>
                         <div>
-                            <label htmlFor="productName">Product Name</label> <br />
-                            <input defaultValue={singleProduct?.name} type="text" name="productName" id="" />
+                            <label htmlFor="name">Product Name</label> <br />
+                            <input defaultValue={singleProduct?.name} type="text" name="name" id="" />
                         </div>
                         <div>
                             <label htmlFor="productId">Product SKU</label> <br />

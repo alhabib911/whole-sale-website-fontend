@@ -5,7 +5,7 @@ const useReview = () => {
     
     const [reviews, setReviews] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/review',{
+        fetch('https://secret-sierra-86800.herokuapp.com/review',{
             method: 'GET',
             headers: {
                 'content-type': 'application/json',

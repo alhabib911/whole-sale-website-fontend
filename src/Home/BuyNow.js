@@ -47,7 +47,7 @@ const BuyNow = () => {
 
         const order = { productName, email, phone, address, quantity, userName, price }
 
-        fetch('http://localhost:5000/manageorder', {
+        fetch('https://secret-sierra-86800.herokuapp.com/manageorder', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -79,7 +79,7 @@ const BuyNow = () => {
     // console.log(id);
     const [product] = useProducts()
     const singleProduct = product.find((product) => product._id == id)
-
+console.log(product);
     return (
         <div>
             <Navbar></Navbar>
