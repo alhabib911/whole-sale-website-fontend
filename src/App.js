@@ -22,6 +22,7 @@ import MyProfile from './Pages/MyProfile';
 import MyProfileEdit from './Pages/MyProfileEdit';
 import MyReview from './Pages/MyReview';
 import Payment from './Pages/Payment';
+import UpdateProduct from './Pages/UpdateProduct';
 import Users from './Pages/Users';
 
 
@@ -34,6 +35,7 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/contact' element={<ContactUs></ContactUs>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='/update/:id' element={<UpdateProduct></UpdateProduct>}></Route>
         <Route path='/portfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='/allreviews' element={<AllReviews></AllReviews>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>

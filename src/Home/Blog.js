@@ -42,13 +42,6 @@ const Blog = () => {
                     <p> If update it directly, line of work the setState() later on may replace the update created. after you directly update the state, it doesn't modification this.state directly. Instead, it creates a unfinished state transition, and accessing it when line of work this technique can solely come the current worth. may I lose management of the state across all parts.</p>
                 </div>
                 <div className="ques">
-                    <h2>5. You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?</h2>
-                </div>
-                <div className="ans">
-                    <p>Firistly I'll create a distucture the product details and call product and with name.
-                    </p>
-                </div>
-                <div className="ques">
                     <h2>6. What is a unit test? Why should write unit tests?</h2>
                 </div>
                 <div className="ans">

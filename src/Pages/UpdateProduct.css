@@ -1,0 +1,29 @@
+.single-product-edit{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+.single-product-edit input{
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.single-product-edit label{
+    font-weight: 500px;
+}
+.single-product-edit input:focus{
+    outline: none;
+}
+.update-profile-btn{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.update-product{
+    background-color: #252569;
+    color: #fff;
+    padding: 12px 55px;
+}

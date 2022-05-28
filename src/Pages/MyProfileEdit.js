@@ -207,7 +207,7 @@ const MyProfileEdit = () => {
 
                         <div className="upload-btn">
                             <BiEdit/>
-                            <input type="submit" value="Upload Product" />
+                            <input type="submit" value="Upload" />
                         </div>
                     </form>
                     <ToastContainer />

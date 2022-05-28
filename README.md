@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Welcome to Kelong Menufacture website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This Project Live site link of [kelong]().
 
-## Available Scripts
+## Project FrontEnd Source code 
 
-In the project directory, you can run:
+This Project FrontEnd Source Code link of [kelong](https://github.com/programming-hero-web-course1/manufacturer-website-client-side-alhabib911).
 
-### `npm start`
+## Project BackEnd Source code 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This Project BackEnd Source Code link of [kelong](https://github.com/programming-hero-web-course1/manufacturer-website-server-side-alhabib911).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Deploy Clint Side
+This project Clint Side deploy in Firebase
 
-### `npm test`
+### Deploy Server Site
+This project Server Site deploy in Heroku
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Project Details
+<ul>
+    <li>This is a Full Stack manufacturer Website</li>
+    <li>Clint side develop by React JS and Server Side develop by Node JS with Database used MongoDB</li>
+    <li>Used most useful & Powerful Authentication system Firebase</li>
+    <li>Privet Route, toast, alert used</li>
+    <li>Home page has 8 container Full website is responsive for Mobile, Tablet and Laptop</li>
+    <li>Customer can order any product</li>
+    <li>The website has admin panel and customer site</li>
+    <li>Admin can access product and order management & customer can payment and sent review</li>
+</ul>
 
-### `npm run build`
+### Framework
+1. This project use tailwind and library is Daisy for style.
+2. Use most Popular React js
+3. Customs hook for service details
+4. Use Node js for server site
+5. Authentication on Firebase
+6. Database used MongoDB
+7. Backend Api for Node Js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Project Creator 
+Abdullah Al Habib

@@ -3,7 +3,7 @@ import './Review.css'
 
 const Review = ({ reviews }) => {
     const { rating, review, email, name, img } = reviews
-    console.log(reviews);
+    // console.log(reviews);
     return (
         <div class="box-container ">
             <div className="rev-info">
@@ -17,7 +17,7 @@ const Review = ({ reviews }) => {
             </div>
             <div class="card-body">
                 <p>{review.slice(0, 150)}</p>
-                <p>{rating}</p>
+                <p>{rating} out of 5</p>
             </div>
         </div>
     );

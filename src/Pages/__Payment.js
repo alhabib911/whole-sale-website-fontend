@@ -4,7 +4,6 @@ import useOrder from '../hooks/useOrder';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import CheckoutForm from './CheckoutForm';
-import usePayment from '../hooks/usePayment';
 
 const stripePromise = loadStripe('pk_test_51L3ByXHhwmW5GAYW3w4MIHBWKCwjW1zyuGIq1ZjLJLCkj4SAGGDBHEqTOOnwFzk4r3LRbuStepmzMacqtI1E455Q00UWFlyFCB');
 
@@ -13,9 +12,6 @@ const Payment = () => {
     const [order] = useOrder()
     const singleOrder = order.find((order) => order._id == id)
     console.log(order);
-    const [payment] = usePayment()
-    console.log();
-
 
     
 

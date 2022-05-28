@@ -2,27 +2,28 @@ import React from 'react';
 import './ManageProduct.css'
 // import { AiFillDelete } from 'react-icons/ai';
 import { toast, ToastContainer } from 'react-toastify';
+import { Link, useParams } from 'react-router-dom';
 
 const ManageProduct = (props) => {
     const { _id, img, name, price, quantity, minmumOrder } = props.product
     const handleProductItemDelete = id => {
         const proceed = window.confirm('Do you want to delete this item?')
-        if(proceed){
+        if (proceed) {
             console.log('delete', id);
             const url = `http://localhost:5000/product/${id}`
-            fetch (url, {
+            fetch(url, {
                 method: "DELETE"
             })
-            .then(res => res.json())
-            .then(data=> {
-                if(data.deletedCount > 0){
-                    console.log('deleted');
-                }
-            })
-            .then(() => {
-                window.location.reload();
-                toast('This Product is Deleted Reload this page');
-            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        console.log('deleted');
+                    }
+                })
+                .then(() => {
+                    window.location.reload();
+                    toast('This Product is Deleted Reload this page');
+                })
         }
     }
 
@@ -46,10 +47,11 @@ const ManageProduct = (props) => {
                     <small>Available Product: {quantity}/p</small>
                 </div>
                 <div className="product-delete-button">
-                <button onClick={()=> handleProductItemDelete(_id)}>Delete</button>
+                    <button onClick={() => handleProductItemDelete(_id)}>Delete</button>
                 </div>
+                <Link to={`/update/${_id}`}>Edit</Link>
             </div>
-            <ToastContainer/>
+            <ToastContainer />
         </div>
     );
 };

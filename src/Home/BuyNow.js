@@ -24,32 +24,15 @@ const BuyNow = () => {
 
 
     const handelIncrement = () => {
-        if (quantity < singleProduct.quantity) {
-            setQuantity(prevCount => parseInt(prevCount) + 1)
-        }
-        else {
-            toast('Your Purchase limit is over')
-        }
+        setQuantity(prevCount => parseInt(prevCount) + 1)
     }
 
     const handelDecrement = () => {
-        if (quantity > singleProduct.minmumOrder) {
-            setQuantity(prevCount => prevCount - 1)
-        }
-        else {
-            toast('Please add minimum quantity')
-        }
-    }
-
-    const buyNow = () => {
-        if (quantity > singleProduct.quantity) {
-            alert('Your Purchase limit is over')
-        }
-        if (quantity < singleProduct.quantity) {
-            alert('Add more Quantity')
-        }
+            setQuantity(prevCount => parseInt(prevCount) - 1)
         
     }
+ 
+
 
     const handelAdOrder = event => {
         event.preventDefault()
@@ -81,10 +64,12 @@ const BuyNow = () => {
                     navigate('/dashboard/myorder')
                 }
             })
-
+            
     }
-
-
+// const 
+//     if(quantity > singleProduct.minmumOrder){
+//         alert('add')
+//     }
     
 
 
@@ -181,8 +166,7 @@ const BuyNow = () => {
                                 </div>
                                 <div className="product-quantity">
                                     <button onClick={handelDecrement} className='decrement-button'>-</button>
-
-                                    <input type="text" value={quantity} onChange={event => setQuantity(event.target.value)} name="quantity" id="" placeholder='100/p' />
+                                    <input type="text" value={quantity}  name="quantity" id="" />
                                     <button onClick={handelIncrement} className='increment-button'>+</button>
                                 </div>
                             </div> <br />
@@ -191,7 +175,9 @@ const BuyNow = () => {
                                     <GiShoppingCart />
                                 </div>
                                 <div className="buy-now-submit-button">
-                                    <input onClick={buyNow} type="submit" value="Buy Now" />
+                                    <button>
+                                        <input type="submit" value="Buy Now" />
+                                    </button>
                                 </div>
                             </div>
                         </form>

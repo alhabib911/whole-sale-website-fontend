@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import useMyReview from '../hooks/useMyReview';
 import useUpdateUser from '../hooks/useUpdateUser';
@@ -6,6 +6,7 @@ import './MyReview.css'
 
 
 const MyReview = () => {
+
   const [updateUser] = useUpdateUser('')
   // const [reviews] = useReview('')
   // console.log(updateUser);
@@ -58,15 +59,7 @@ const MyReview = () => {
         </div>
         <div className="user-review-field">
           <form onSubmit={handelAddReview} className='feedback'>
-            <div className="star">
-              <div class="rating">
-                <input type="radio" name="rating" class="mask mask-star" />
-                <input type="radio" name="rating" class="mask mask-star" checked />
-                <input type="radio" name="rating" class="mask mask-star" />
-                <input type="radio" name="rating" class="mask mask-star" />
-                <input type="radio" name="rating" class="mask mask-star" />
-              </div>
-            </div>
+            <input type="number" name="rating" id="" placeholder='5 out of' required/>
             <textarea className='review' name="review" id="" ></textarea> <br />
             <input type="hidden" value={updateUser.img} name="img" id="" />
             <input type="hidden" value={updateUser.email} name="email" id="" />
