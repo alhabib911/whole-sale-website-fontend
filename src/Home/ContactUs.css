@@ -1,0 +1,13 @@
+.contacts-info-details{
+    display: flex;
+    margin-top: 20px;
+}
+.icon{
+    font-size: 18px;
+}
+.details p{
+    font-size: 18px;
+    color: #252569;
+    font-weight: 500;
+    padding-left: 18px;
+}

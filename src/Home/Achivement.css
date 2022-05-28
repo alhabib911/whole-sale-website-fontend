@@ -57,3 +57,46 @@
     font-size: 18px;
     font-weight: 500;
 }
+@media screen and (max-width: 687px)  {
+    .achivement-footer{
+        width: 90%;
+        margin: auto;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        padding: 25px;
+        display: flex;
+        box-shadow: 1px 0px 10px 0 gainsboro;
+        border-radius: 10px;
+    }
+    .achivement-footer-text h2{
+        font-size: 18px;
+        font-weight: 700;
+        color: #252569;
+    }
+    .achivement-footer-text p{
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .achivement-footer{
+        width: 90%;
+        margin: auto;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        padding: 25px;
+        display: flex;
+        box-shadow: 1px 0px 10px 0 gainsboro;
+        border-radius: 10px;
+    }
+    .achivement-footer-text h2{
+        font-size: 18px;
+        font-weight: 700;
+        color: #252569;
+    }
+    .achivement-footer-text p{
+        font-size: 16px;
+        font-weight: 500;
+    }
+}

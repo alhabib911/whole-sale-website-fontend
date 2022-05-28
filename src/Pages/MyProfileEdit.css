@@ -1,0 +1,30 @@
+.border-edit:focus{
+    outline: none;
+}
+.edit-update-form{
+    padding-top: 25px;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-gap: 25px;
+    justify-items: start;
+    grid-template-columns: repeat(3, 1fr);
+}
+.upload-btn{
+    margin-top: 55px;
+    margin-left: 30px;
+    width: 90%;
+    background-color: #252569;
+    color: #fff;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.edit-page-img{
+    width: 250px;
+    margin: 50px 0 0 50px;
+}

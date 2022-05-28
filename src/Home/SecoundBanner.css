@@ -24,3 +24,42 @@
 .learn-more-button{
     padding-left: 10px;
 }
+@media screen and (max-width: 687px)  {
+    .hero-text-container{
+        width: 90%;
+    }
+    .learn-button{
+        width: 35%;
+        background-color: #252569;
+        color: #fff;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        margin-left: 175px;
+    }
+    .hero-img-container img{
+        display: none;
+    }
+}
+
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .hero-text-container{
+        width: 90%;
+    }
+    .learn-button{
+        width: 35%;
+        background-color: #252569;
+        color: #fff;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        margin-left: 175px;
+    }
+    .hero-img-container img{
+        display: none;
+    }
+}

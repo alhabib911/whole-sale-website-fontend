@@ -29,3 +29,9 @@
     padding-top: 20px;
     color: #252569;
 }
+.box-img-container img{
+    width: 120px;
+}
+.rev-info{
+    display: flex;
+}

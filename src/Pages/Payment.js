@@ -13,6 +13,8 @@ const Payment = () => {
     const singleOrder = order.find((order) => order._id == id)
     console.log(order);
 
+    
+
     return (
         <div>
             <div class="overflow-x-auto">

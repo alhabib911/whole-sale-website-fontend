@@ -14,6 +14,7 @@ import { RiPhoneFill } from 'react-icons/ri'
 import { MdOutlineLocationOn } from 'react-icons/md'
 import { MdProductionQuantityLimits } from 'react-icons/md'
 import { toast, ToastContainer } from 'react-toastify';
+import { current } from 'daisyui/src/colors';
 
 
 const BuyNow = () => {
@@ -40,6 +41,15 @@ const BuyNow = () => {
         }
     }
 
+    const buyNow = () => {
+        if (quantity > singleProduct.quantity) {
+            alert('Your Purchase limit is over')
+        }
+        if (quantity < singleProduct.quantity) {
+            alert('Add more Quantity')
+        }
+        
+    }
 
     const handelAdOrder = event => {
         event.preventDefault()
@@ -181,7 +191,7 @@ const BuyNow = () => {
                                     <GiShoppingCart />
                                 </div>
                                 <div className="buy-now-submit-button">
-                                    <input type="submit" value="Buy Now" />
+                                    <input onClick={buyNow} type="submit" value="Buy Now" />
                                 </div>
                             </div>
                         </form>
