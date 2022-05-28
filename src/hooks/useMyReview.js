@@ -11,7 +11,7 @@ const useMyReview = () => {
 
 
             useEffect(()=>{
-                fetch(`https://secret-sierra-86800.herokuapp.com/review?email=${email}`,{
+                fetch(`http://localhost:5000/review?email=${email}`,{
                     method: 'GET',
                     headers: {
                         'content-type': 'application/json',

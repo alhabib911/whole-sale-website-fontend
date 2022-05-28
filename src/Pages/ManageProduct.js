@@ -10,7 +10,7 @@ const ManageProduct = (props) => {
         const proceed = window.confirm('Do you want to delete this item?')
         if (proceed) {
             console.log('delete', id);
-            const url = `https://secret-sierra-86800.herokuapp.com/product/${id}`
+            const url = `http://localhost:5000/product/${id}`
             fetch(url, {
                 method: "DELETE"
             })
@@ -49,7 +49,9 @@ const ManageProduct = (props) => {
                 <div className="product-delete-button">
                     <button onClick={() => handleProductItemDelete(_id)}>Delete</button>
                 </div>
-                <Link to={`/update/${_id}`}>Edit</Link>
+                <div className="edit-button">
+                    <Link to={`/update/${_id}`}>Edit</Link>
+                </div>
             </div>
             <ToastContainer />
         </div>

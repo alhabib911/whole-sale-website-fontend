@@ -32,7 +32,7 @@ const AddProduct = () => {
                         img: img
                     }
                     // send to your database 
-                    fetch('https://secret-sierra-86800.herokuapp.com/product', {
+                    fetch('http://localhost:5000/product', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

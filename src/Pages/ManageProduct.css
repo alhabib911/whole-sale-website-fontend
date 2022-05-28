@@ -29,4 +29,8 @@
     border-radius: 10px;
     padding: 10px;
 }
-
+.edit-button{
+    display: flex;
+    align-items: center;
+    color: green;
+}
