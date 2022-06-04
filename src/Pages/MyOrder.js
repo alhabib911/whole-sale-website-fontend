@@ -13,7 +13,7 @@ const MyOrder = () => {
         const getItem = async () => {
 
             const email = user.email
-            const url = `http://localhost:5000/manageorders?email=${email}`
+            const url = `https://secret-sierra-86800.herokuapp.com/manageorders?email=${email}`
             const { data } = await axios.get(url, {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`

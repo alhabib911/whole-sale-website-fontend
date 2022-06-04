@@ -6,7 +6,7 @@ const useCustomer = user => {
     useEffect( () =>{
         const email = user?.email;
         if(email){
-            fetch(`http://localhost:5000/customer/${email}`, {
+            fetch(`https://secret-sierra-86800.herokuapp.com/customer/${email}`, {
                 method:'GET',
                 headers: {
                     'content-type': 'application/json',

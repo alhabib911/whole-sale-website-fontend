@@ -20,7 +20,7 @@ const MyProfileEdit = () => {
 
 
 
-        const url = `http://localhost:5000/user/${email}`
+        const url = `https://secret-sierra-86800.herokuapp.com/user/${email}`
         fetch(url, {
             method: 'PUT',
             headers: {

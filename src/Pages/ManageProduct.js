@@ -10,7 +10,7 @@ const ManageProduct = (props) => {
         const proceed = window.confirm('Do you want to delete this item?')
         if (proceed) {
             console.log('delete', id);
-            const url = `http://localhost:5000/product/${id}`
+            const url = `https://secret-sierra-86800.herokuapp.com/product/${id}`
             fetch(url, {
                 method: "DELETE"
             })
