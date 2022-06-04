@@ -11,13 +11,13 @@ const Review = ({ reviews }) => {
                     <img className='' src={img} alt="" />
                 </div>
                 <div className="name-email-box">
-                    <h2>Customer Name: {name}</h2>
+                    <p>Rating: {rating} out of 5</p>
+                    <h2>Customer Name: {name || email}</h2>
                     <small>{email}</small>
                 </div>
             </div>
             <div class="card-body">
                 <p>{review.slice(0, 150)}</p>
-                <p>{rating} out of 5</p>
             </div>
         </div>
     );

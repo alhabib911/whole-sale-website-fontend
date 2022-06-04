@@ -27,7 +27,7 @@ const UpdateProduct = () => {
        
     
     
-        const url = `https://secret-sierra-86800.herokuapp.com/product/${id}`
+        const url = `http://localhost:5000/product/${id}`
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -51,7 +51,7 @@ const UpdateProduct = () => {
             <div className="product-update-details">
                 <div class="avatar">
                     <div class="w-24 rounded-xl">
-                        {/* <img src={singleProduct?.img} alt="" /> */}
+                        <img src={singleProduct?.img} alt="" />
                     </div>
                 </div>
                 <form onSubmit={handelUpdateProduct}>

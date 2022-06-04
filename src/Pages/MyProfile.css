@@ -84,3 +84,6 @@
     padding: 10px;
     font-size: 18px;
 }
+.image-edit-btn input{
+    /* display: none; */
+}

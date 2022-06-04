@@ -23,7 +23,7 @@ const MyReview = () => {
 
     const userReviews = { rating, review, name, email, img }
 
-    fetch('https://secret-sierra-86800.herokuapp.com/review', {
+    fetch('http://localhost:5000/review', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

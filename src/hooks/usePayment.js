@@ -6,7 +6,7 @@ const usePayment = () => {
     const { id } = useParams()
     const [payment, setPayment] = useState([])
     useEffect(()=>{
-        fetch(`https://secret-sierra-86800.herokuapp.com/order/${id}`,{
+        fetch(`http://localhost:5000/order/${id}`,{
             method: 'GET',
             headers: {
                 'content-type': 'application/json',

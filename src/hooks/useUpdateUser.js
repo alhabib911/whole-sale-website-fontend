@@ -8,7 +8,7 @@ const useUpdateUser = () => {
     // console.log(user);
     const [updateUser, setUpdateUser] = useState({})
     useEffect(()=>{
-        fetch(`https://secret-sierra-86800.herokuapp.com/user/${email}`,{
+        fetch(`http://localhost:5000/user/${email}`,{
             method: 'GET',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

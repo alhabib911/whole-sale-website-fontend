@@ -14,25 +14,11 @@ import { RiPhoneFill } from 'react-icons/ri'
 import { MdOutlineLocationOn } from 'react-icons/md'
 import { MdProductionQuantityLimits } from 'react-icons/md'
 import { toast, ToastContainer } from 'react-toastify';
-import { current } from 'daisyui/src/colors';
 
 
 const BuyNow = () => {
     const navigate = useNavigate()
-    const [quantity, setQuantity] = useState(1)
-    console.log(quantity);
-
-
-    const handelIncrement = () => {
-        setQuantity(prevCount => parseInt(prevCount) + 1)
-    }
-
-    const handelDecrement = () => {
-            setQuantity(prevCount => parseInt(prevCount) - 1)
-        
-    }
  
-
 
     const handelAdOrder = event => {
         event.preventDefault()
@@ -40,14 +26,14 @@ const BuyNow = () => {
         const email = event.target.email.value
         const phone = event.target.phone.value
         const address = event.target.address.value
-        const quantity = event.target.quantity.value
+        const qty = event.target.qty.value
         const userName = event.target.userName.value
         const price = event.target.price.value
 
 
-        const order = { name, email, phone, address, quantity, userName, price }
+        const order = { name, email, phone, address, qty, userName, price }
 
-        fetch('https://secret-sierra-86800.herokuapp.com/manageorder', {
+        fetch('http://localhost:5000/manageorder', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -64,13 +50,9 @@ const BuyNow = () => {
                     navigate('/dashboard/myorder')
                 }
             })
-            
+
     }
-// const 
-//     if(quantity > singleProduct.minmumOrder){
-//         alert('add')
-//     }
-    
+
 
 
     const [user] = useAuthState(auth)
@@ -79,7 +61,9 @@ const BuyNow = () => {
     // console.log(id);
     const [product] = useProducts()
     const singleProduct = product.find((product) => product._id == id)
-console.log(product);
+    
+
+    // console.log(singleProduct);
     return (
         <div>
             <Navbar></Navbar>
@@ -165,9 +149,7 @@ console.log(product);
                                     </div>
                                 </div>
                                 <div className="product-quantity">
-                                    <button onClick={handelDecrement} className='decrement-button'>-</button>
-                                    <input type="text" value={quantity}  name="quantity" id="" />
-                                    <button onClick={handelIncrement} className='increment-button'>+</button>
+                                    <input type="number" min={singleProduct?.minmumOrder} max={singleProduct?.quantity} defaultValue={singleProduct?.minmumOrder} required name="qty" id="" />
                                 </div>
                             </div> <br />
                             <div className="submit-btn">

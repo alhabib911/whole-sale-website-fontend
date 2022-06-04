@@ -27,4 +27,21 @@
 .edit-page-img{
     width: 250px;
     margin: 50px 0 0 50px;
+}   
+.update-user-info input{
+    cursor: pointer;
+}
+.update-user-info{
+    width: 30%;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #252569;
+    color: #fff;
+    font-weight: 400;
+    margin-top: 30px;
+    cursor: pointer;
+
 }

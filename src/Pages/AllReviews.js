@@ -13,7 +13,7 @@ const AllReviews = () => {
             </div>
             <div className='all-review'>
                 {
-                    reviews.slice(0, 6).map(reviews => <Review
+                    reviews.slice(0, 3).map(reviews => <Review
                         reviews={reviews}
                     ></Review>)
                 }

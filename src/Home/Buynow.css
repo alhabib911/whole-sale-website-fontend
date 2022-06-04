@@ -176,8 +176,11 @@
     padding-left: 90px;
 }
 .product-quantity input{
-    width: 40%;
-    padding-left: 72px;
+    width: 55%;
+    padding: 10px;
+    padding-left: 85px;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
 }
 .increment-button{
     background-color: #252569;

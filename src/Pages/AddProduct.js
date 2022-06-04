@@ -20,7 +20,7 @@ const AddProduct = () => {
 
             .then(res => res.json())
             .then(result => {
-                console.log(result);
+                // console.log(result);
                 if (result.success) {
                     const img = result.data.url;
                     const product = {
@@ -32,7 +32,7 @@ const AddProduct = () => {
                         img: img
                     }
                     // send to your database 
-                    fetch('https://secret-sierra-86800.herokuapp.com/product', {
+                    fetch('http://localhost:5000/product', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

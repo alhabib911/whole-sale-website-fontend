@@ -1,45 +1,58 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import useOrder from '../hooks/useOrder';
-import { AiTwotoneDelete } from 'react-icons/ai';
-import './MyOrder.css'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../firebase.init';
+;
+;
 
 const MyOrder = () => {
-    const [order] = useOrder()
+    const [user] = useAuthState(auth)
+    const [order, setOrder] = useState([])
     console.log(order);
+    useEffect(() => {
+        const getItem = async () => {
+
+            const email = user.email
+            const url = `http://localhost:5000/manageorders?email=${email}`
+            const { data } = await axios.get(url, {
+                headers: {
+                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                }
+            })
+            setOrder(data)
+        }
+        getItem()
+    }, [user])
     return (
         <div>
-            <h2>Total Order: {order.length}</h2>
-            <div class="">
-                <table class="table w-full">
-                    <thead>
-                        <tr>
-                            <th>User</th>
-                            <th>Product Name</th>
-                            <th>Quantity</th>
-                            <th>Price</th>
-                            <th>Ammount</th>
-                            <th>Payment</th>
-                            <th>Delete</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            order.map(order => <tr>
-                                <th>{order?.userName || order?.email?.slice(0, 10)}...</th>
-                                <td>{order?.name?.slice(0, 30)}</td>
-                                <td>{order.quantity}</td>
-                                <td>{order.price}</td>
-                                <td>{order.quantity * order.price}</td>
-                                <td>{(order.quantity * order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button>Pay Now</button></Link>}</td>
-                                <td className='delete-button'><AiTwotoneDelete/></td>
-                                <td>{(order.quantity * order.price && order.paid) && <Link to={``}><span>Pay Now</span></Link>}</td>
-                            </tr>)
-                        }
-
-                    </tbody>
-                </table>
+            <h4>{user?.displayName || user?.email} Uploaded Product: {order?.length}</h4>
+            <div>
+                <div class="overflow-x-auto">
+                    <table class="table w-full">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Order Qty</th>
+                                <th>Price</th>
+                                <th>Payable Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                order.map(order => <tr>
+                                    <th>{order?.name}</th>
+                                    <td>{order?.qty}</td>
+                                    <td>{order?.price}</td>
+                                    <td>{order?.price * order?.qty}</td>
+                                    <td></td>
+                                </tr>)
+                            }
+                        </tbody>
+                    </table>
+                </div>
             </div>
+      
+
         </div>
     );
 };
