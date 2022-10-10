@@ -30,6 +30,7 @@ const MyProfile = () => {
                         <div><h2>Phone Number: {updateUser?.phoneNumber}</h2></div>
                         <div><h2>Address: {updateUser?.address}</h2></div>
                         <div><h2>Date of Birth: {updateUser?.birthday}</h2></div>
+                        <div><h2>Id Number: {updateUser?.birthday}</h2></div>
                     </div>
                 </div>
             </div>

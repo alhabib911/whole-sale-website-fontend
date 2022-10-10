@@ -13,7 +13,7 @@ const UpdateProduct = () => {
     // console.log(product);
     const singleProduct = product.find((product) => product._id == id)
 
-
+    
     const handelUpdateProduct = event => {
         event.preventDefault()
         const name = event.target.name.value

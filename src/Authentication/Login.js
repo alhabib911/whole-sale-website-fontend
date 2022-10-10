@@ -75,10 +75,8 @@ const Login = () => {
                         <input onBlur={handlePasswordBlur} type="password" name="password" id="" placeholder='Your Password Please' required />
                         <br />
                         <br />
-                        {
-                        loading && <p className='loading'>Loading...</p>
-                    }
-                        <p className='error'>{error?.message}</p>
+                        
+                        {/* <p className='error'>{error?.message}</p> */}
                         <input className='submit-button' type="submit" value="Continue" />
                     </form>
                     <div className="forget-button">

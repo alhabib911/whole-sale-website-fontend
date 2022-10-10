@@ -51,6 +51,7 @@ const Navbar = () => {
                         :
                         <Link to='/login'><RiAccountPinCircleFill /><span>Login/Register</span></Link>
                 }
+               
 
 
             </div>

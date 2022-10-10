@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import Navbar from '../Share/Navbar'
 import Footer from '../Share/Footer'
 import './Register.css'
-import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../firebase.init';
 import { sendEmailVerification } from 'firebase/auth';
 import { toast, ToastContainer } from 'react-toastify';
 import useToken from '../hooks/useToken';
 import { FcGoogle } from 'react-icons/fc';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -59,7 +60,6 @@ const Register = () => {
     }
     if (token) {
         navigate('/home')
-        // console.log(token);
     }
 
    
